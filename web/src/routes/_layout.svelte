@@ -6,7 +6,7 @@
 
 <style>
   main {
-    /* position: relative; */
+    position: relative;
     /* background-color: var(--white); */
     margin: 0 auto;
   }

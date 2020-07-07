@@ -49,7 +49,10 @@
       </a>
     </li>
     <li>
-      <a class={segment === 'tribute' ? 'selected' : ''} href="tribute">
+      <a
+        rel="prefetch"
+        class={segment === 'tribute' ? 'selected' : ''}
+        href="tribute">
         tribute
       </a>
     </li>

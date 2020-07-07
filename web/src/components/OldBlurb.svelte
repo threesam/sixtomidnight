@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin-top: 1rem;
     max-width: 56rem;
-    padding: 0.5rem;
+    padding: 1rem;
   }
   p {
     margin-bottom: 2rem;
