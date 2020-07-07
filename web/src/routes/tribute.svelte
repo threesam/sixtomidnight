@@ -64,7 +64,7 @@
 
 <section>
   <div class="video-container">
-    <video src={clip} autoplay loop muted />
+    <video src={clip} autoplay loop muted playsinline />
   </div>
   <div class="content">
     <h2>Remembering</h2>
