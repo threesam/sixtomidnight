@@ -20,12 +20,10 @@
     flex-flow: row;
     align-items: center;
     height: 100%;
-    width: 100%;
+    max-width: 400px;
+    justify-content: space-evenly;
   }
 
-  li {
-    margin-left: 1.5rem;
-  }
   a {
     text-decoration: none;
   }

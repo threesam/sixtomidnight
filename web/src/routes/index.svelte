@@ -12,15 +12,6 @@
     height: 100vh;
     width: 100%;
   }
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 2em;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
   img {
     position: fixed;
     width: 50%;
@@ -28,6 +19,7 @@
     height: 100%;
     top: 0;
     opacity: 0.5;
+    z-index: -10;
     filter: invert();
   }
 </style>
