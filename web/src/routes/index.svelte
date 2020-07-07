@@ -1,19 +1,34 @@
+<script>
+  import { fade } from 'svelte/transition'
+
+  let clip = 'website.mp4'
+</script>
+
 <style>
-  h1,
-  h2 {
+  div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  h1 {
     text-align: center;
     margin: 0 auto;
   }
   h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
+    font-size: 2em;
     font-weight: 700;
     margin: 0 0 0.5em 0;
   }
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
+  img {
+    position: fixed;
+    width: 50%;
+    max-width: 25rem;
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+    filter: invert();
   }
 </style>
 
@@ -21,5 +36,6 @@
   <title>Six to Midnight</title>
 </svelte:head>
 
-<h1>Six to Midnight</h1>
-<h2>Coming Soon!</h2>
+<div>
+  <img in:fade src="logoMain.svg" alt="logo" />
+</div>

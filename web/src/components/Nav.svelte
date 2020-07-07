@@ -3,62 +3,38 @@
 </script>
 
 <style>
+  :global(:root) {
+    --nav-height: 3rem;
+  }
+
   nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
+    border-bottom: 1px solid var(--dark-grey);
     font-weight: 300;
-    padding: 0 1em;
+    height: var(--nav-height);
+    background: var(--black);
+    color: var(--white);
   }
 
   ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* clearfix */
-  ul::after {
-    content: '';
-    display: block;
-    clear: both;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
 
   li {
-    display: block;
-    float: left;
+    margin-left: 1.5rem;
   }
-
-  img {
-    height: 2rem;
-    margin: -0.5rem 0;
-  }
-
-  .selected {
-    position: relative;
-    display: inline-block;
-  }
-
-  .selected::after {
-    position: absolute;
-    content: '';
-    width: calc(100% - 1em);
-    height: 2px;
-    background-color: rgb(255, 62, 0);
-    display: block;
-    bottom: -1px;
-  }
-
   a {
     text-decoration: none;
-    padding: 1em 0.5em;
-    display: block;
   }
 </style>
 
 <nav>
   <ul>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">
-        <img src="logoMain.svg" alt="logo" />
-      </a>
+      <a class={segment === undefined ? 'selected' : ''} href=".">home</a>
     </li>
     <li>
       <a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
@@ -69,9 +45,14 @@
     <li>
       <a
         rel="prefetch"
-        class={segment === 'blog' ? 'selected' : ''}
-        href="blog">
-        blog
+        class={segment === 'tricks' ? 'selected' : ''}
+        href="tricks">
+        tricks
+      </a>
+    </li>
+    <li>
+      <a class={segment === 'tribute' ? 'selected' : ''} href="tribute">
+        tribute
       </a>
     </li>
   </ul>
