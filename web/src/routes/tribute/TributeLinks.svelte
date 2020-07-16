@@ -4,12 +4,12 @@
       name: 'facebook',
       href:
         'https://www.facebook.com/pages/Six-to-Midnight-Production-Studios/166143110389253',
-      class: 'fab fa-facebook-square',
+      icon: 'fab fa-facebook-square',
     },
     {
       name: 'instagram',
       href: 'https://www.instagram.com/sixtomidnightproductions',
-      class: 'fab fa-instagram-square',
+      icon: 'fab fa-instagram-square',
     },
   ]
 </script>
@@ -22,6 +22,7 @@
     text-align: center;
     border-radius: 1rem;
     color: var(--accent);
+    box-shadow: inset 0 0 0.125rem var(--black);
   }
   .links {
     display: flex;
@@ -41,6 +42,7 @@
   h3 {
     text-transform: uppercase;
     margin: 0;
+    text-shadow: 0 0.125rem 0.25rem var(--black);
   }
   span {
     font-size: 0.8rem;
@@ -54,13 +56,9 @@
   <h3>Social Links</h3>
   <span>(archived)</span>
   <div class="links">
-    {#each links as link}
-      <a
-        href={link.href}
-        aria-label={link.name}
-        target="_blank"
-        rel="noopener noreferrer">
-        <i class={link.class} />
+    {#each links as { href, name, icon }}
+      <a {href} aria-label={name} target="_blank" rel="noopener noreferrer">
+        <i class={icon} />
       </a>
     {/each}
   </div>
