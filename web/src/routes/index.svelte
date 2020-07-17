@@ -1,5 +1,5 @@
 <script>
-  import { fade } from 'svelte/transition'
+  import { fade, blur } from 'svelte/transition'
 </script>
 
 <style>
@@ -23,12 +23,11 @@
     max-width: 20rem;
     height: 100%;
     top: 0;
-    opacity: 0.5;
+    opacity: 0.02;
     z-index: -10;
     filter: invert();
   }
-  h1,
-  p {
+  h1 {
     text-align: center;
   }
 
@@ -48,16 +47,13 @@
   <title>Six to Midnight</title>
 </svelte:head>
 
-<section>
-  <h1>So About Covid</h1>
+<section in:blur>
+  <h1>So About Covid...</h1>
   <p>
-    Based on state guidelines, we are not offering in-person recording or
-    content creation. Web design/development, streaming consultation/services,
-    and audio mixing/mastering are still available, with outdoor event
-    production to follow.
-  </p>
-  <p>
-    Stay safe! and also
+    Based on state guidelines, we are not currently offering in-person recording
+    or content creation. However, web design/development, streaming consultation
+    & services, and audio mixing & mastering are still available, with outdoor
+    event production to follow. Stay safe! and also...
     <a href="https://blacklivesmatter.com/">#BLM</a>
   </p>
 </section>

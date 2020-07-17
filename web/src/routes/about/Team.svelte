@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-evenly;
     min-height: 100vh;
-    background: var(--dark-grey);
+    padding-bottom: 2rem;
   }
   div {
     text-align: center;
@@ -50,12 +50,14 @@
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--accent);
     margin: 1rem;
   }
 </style>
 
-<article bind:this={container}>
+<article
+  bind:this={container}
+  style="background: url('great-success.png') no-repeat center center/contain;">
   {#if scrollY > top - 75}
     <h2 transition:blur={{ delay: 200 }}>Our Team</h2>
     <div>

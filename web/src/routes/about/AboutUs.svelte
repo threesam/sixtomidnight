@@ -1,5 +1,5 @@
 <script>
-  import { blur } from 'svelte/transition'
+  import { fly } from 'svelte/transition'
 
   import Header from './Header.svelte'
 </script>
@@ -11,7 +11,7 @@
   div {
     display: grid;
     place-content: center;
-    max-width: 70rem;
+    max-width: 56rem;
     margin: 0 auto;
     padding: 2rem;
   }
@@ -25,7 +25,7 @@
 
   <Header title="About Us" src="pedals.jpg" alt="a bunch of guitar pedals" />
 
-  <div>
+  <div in:fly={{ y: -100 }}>
     <p>
       Six to Midnight Productions is a tech-progressive arts collective based
       out of Trenton, NJ. We bring people together, online and face-to-face, to

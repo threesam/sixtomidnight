@@ -9,9 +9,12 @@
 <style>
   div {
     width: 300px;
-    background: rgba(var(--rgb-black), 0.8);
+    background: rgba(var(--rgb-black), 1);
     border-radius: 1rem;
     position: relative;
+    color: var(--light-grey);
+    border: 0.125rem solid var(--dark-grey);
+    overflow: hidden;
   }
   h2,
   figcaption {
@@ -19,9 +22,14 @@
   }
   h2 {
     padding: 1rem;
+    font-weight: 900;
   }
   figcaption {
+    padding: 0 0.5rem;
     padding-bottom: 0.5rem;
+  }
+  img {
+    filter: brightness(0.75) grayscale(25%);
   }
 </style>
 

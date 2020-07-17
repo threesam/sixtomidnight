@@ -32,6 +32,7 @@
     margin: 0 auto;
     top: calc(50% - 2rem);
     z-index: 10;
+    text-shadow: 0 5px 5px black;
   }
 </style>
 
