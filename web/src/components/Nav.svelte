@@ -56,7 +56,7 @@
       <a href=".">home</a>
     </li>
     <li class={segment === 'about' ? 'selected' : ''}>
-      <a href="about">about</a>
+      <a rel="prefetch" href="about">about</a>
     </li>
 
     <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
