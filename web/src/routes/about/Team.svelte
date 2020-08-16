@@ -55,10 +55,9 @@
   }
 </style>
 
-<article
-  bind:this={container}
-  style="background: url('great-success.png') no-repeat center center/contain;">
-  {#if scrollY > top - 75}
+<!-- style="background: url('great-success.png') no-repeat center center/contain;" -->
+<article bind:this={container}>
+  {#if scrollY > top - 400}
     <h2 transition:blur={{ delay: 200 }}>Our Team</h2>
     <div>
       {#each team as teamMember, index}

@@ -4,11 +4,18 @@
 
 <style>
   section {
-    padding: 1rem;
-    max-width: 40rem;
-    margin: 0 auto;
+    padding: 2rem;
+    /* margin: 0 auto; */
+    display: grid;
+    place-content: center;
   }
-  div {
+  #covid {
+    max-width: 40rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .logo {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -19,8 +26,8 @@
   }
   img {
     position: fixed;
-    width: 50%;
-    max-width: 20rem;
+    width: 50rem;
+    max-width: 100%;
     height: 100%;
     top: 0;
     opacity: 0.02;
@@ -47,15 +54,19 @@
   <title>Six to Midnight</title>
 </svelte:head>
 
-<section in:blur>
-  <h1>So About Covid...</h1>
-  <p>
-    Based on state guidelines, we are not currently offering in-person recording
-    or content creation. However, web design/development, streaming consultation
-    & services, and audio mixing & mastering are still available, with outdoor
-    event production to follow. Stay safe! and also...
-    <a href="https://blacklivesmatter.com/">#BLM</a>
-  </p>
+<section>
+  <div in:blur id="covid">
+    <h1>So About Covid...</h1>
+    <p>
+      Based on state guidelines, we are not currently offering in-person
+      recording or content creation. However, web development, streaming
+      consultation & services, and audio mixing & mastering are still available,
+      with outdoor event production to follow when restrictions are loosened.
+      This is an unprecendented, uncertain time for us, our community, and for
+      so many others so please be compassionate and stay safe! Also...
+      <a href="https://blacklivesmatter.com/">#BLM</a>
+    </p>
+  </div>
 </section>
 
 <div class="logo">

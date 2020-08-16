@@ -29,7 +29,7 @@
     <p>
       Six to Midnight Productions is a tech-progressive arts collective based
       out of Trenton, NJ. We bring people together, online and face-to-face, to
-      build communities, create content, and host events.
+      build communities, create online content, and host events.
     </p>
   </div>
 
