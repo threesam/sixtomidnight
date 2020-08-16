@@ -68,7 +68,7 @@
       <a rel="prefetch" href="tribute">tribute</a>
     </li>
   </ul>
-  <a id="contact" href="mailto:sixtomidnight@protonmail.com">
+  <a id="contact" href="mailto:contact@sixtomidnight.productions">
     <i class="fas fa-envelope" />
   </a>
 </nav>
