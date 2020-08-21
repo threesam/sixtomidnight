@@ -8,7 +8,7 @@
 
 <style>
   div {
-    width: 300px;
+    width: 250px;
     background: rgba(var(--rgb-black), 1);
     border-radius: 1rem;
     position: relative;
@@ -36,7 +36,7 @@
 <div transition:fly={{ x: -200, delay: index * 100 }}>
   <h2>{name}</h2>
   <figure>
-    <img src={`${image}?fit=crop&crop=entropy&w=300&h=300`} {alt} />
+    <img src={`${image}?fit=crop&crop=entropy&w=250&h=250`} {alt} />
     <figcaption>{caption}</figcaption>
   </figure>
 </div>
