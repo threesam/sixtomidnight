@@ -70,5 +70,5 @@
 </section>
 
 <div class="logo">
-  <img in:fade src="logoMain.svg" alt="logo" />
+  <img in:fade src="logoMain.svg" alt="six to midnight logo" />
 </div>
