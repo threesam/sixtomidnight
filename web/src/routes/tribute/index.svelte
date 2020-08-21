@@ -111,7 +111,13 @@
 
 <section>
   <div class="video-container">
-    <video src={clip} autoplay loop muted playsinline />
+    <video
+      src={clip}
+      autoplay
+      loop
+      muted
+      playsinline
+      aria-label="a six to midnight productions montage" />
   </div>
   <div in:blur class="content">
     <h2>Remembering</h2>

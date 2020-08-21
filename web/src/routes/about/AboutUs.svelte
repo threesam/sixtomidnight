@@ -23,7 +23,7 @@
 
 <article>
 
-  <Header title="About Us" src="pedals.jpg" alt="a bunch of guitar pedals" />
+  <Header title="About Us" src="pedals.jpg" alt="guitar pedals" />
 
   <div in:fly={{ y: -100 }}>
     <p>
