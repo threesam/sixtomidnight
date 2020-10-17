@@ -1,5 +1,6 @@
 <script>
   import { fade, blur } from 'svelte/transition'
+import Contact from './_contact.svelte';
 </script>
 
 <style>
@@ -68,6 +69,8 @@
     </p>
   </div>
 </section>
+
+<Contact />
 
 <div class="logo">
   <img in:fade src="logoMain.svg" alt="six to midnight logo" />
