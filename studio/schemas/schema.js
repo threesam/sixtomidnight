@@ -9,6 +9,11 @@ import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
+import client from './documents/client'
+import technology from './documents/technology'
+import project from './documents/project'
+import page from './documents/page'
+
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -31,6 +36,10 @@ export default createSchema({
     category,
     author,
     mainImage,
+    client,
+    technology,
+    project,
+    page,
     authorReference,
     bodyPortableText,
     bioPortableText,
