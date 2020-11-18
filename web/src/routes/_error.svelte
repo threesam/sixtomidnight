@@ -6,6 +6,16 @@
 </script>
 
 <style>
+	article {
+		display: grid;
+		place-content: center;
+	}
+	div {
+		display: inline-block;
+		padding: 2rem;
+		margin: 1rem;
+		border: 0.125rem dashed var(--accent);
+	}
 	h1, p {
 		margin: 0 auto;
 	}
@@ -31,10 +41,16 @@
 	<title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<article>
 
-<p>{error.message}</p>
-
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
-{/if}
+	<div>
+		<h1>{status}</h1>
+		
+		<p>{error.message}</p>
+		
+		{#if dev && error.stack}
+		<pre>{error.stack}</pre>
+		{/if}
+	</div>
+	
+</article>

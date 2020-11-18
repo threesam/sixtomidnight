@@ -1,7 +1,5 @@
 <script>
   import AboutUs from './AboutUs.svelte'
-
-  let scrollY
 </script>
 
 <style>
@@ -15,8 +13,6 @@
 <svelte:head>
   <title>About</title>
 </svelte:head>
-
-<svelte:window bind:scrollY />
 
 <section>
   <AboutUs />
