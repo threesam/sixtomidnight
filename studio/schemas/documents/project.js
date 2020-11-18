@@ -60,14 +60,14 @@ export default {
       ]
     },
     {
-      name: 'categories',
+      name: 'technologies',
       type: 'array',
-      title: 'Categories',
+      title: 'Technologies',
       of: [
         {
           type: 'reference',
           to: {
-            type: 'category'
+            type: 'technology'
           }
         }
       ]
