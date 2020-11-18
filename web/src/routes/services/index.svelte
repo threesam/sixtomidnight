@@ -3,7 +3,7 @@
   export function preload({ params, query }) {
     return client
       .fetch(
-        '*[_type == "service" && defined(slug.current) && publishedAt < now()]|order(publishedAt desc)',
+        '*[_type == "service"]',
       )
       .then((services) => {
         return { services }
@@ -25,7 +25,7 @@
 
   {#each services as service}
   <!-- content here -->
-  <li>{service.title}</li>
+  <li>{service.name}</li>
   {/each}
 </ul>
 {/if}
