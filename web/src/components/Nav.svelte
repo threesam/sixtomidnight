@@ -38,16 +38,6 @@
   .selected {
     border-bottom: 1px solid var(--accent);
   }
-  #contact {
-    height: 100%;
-    display: grid;
-    place-content: center;
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-  #contact:hover {
-    color: var(--accent);
-  }
 </style>
 
 <nav>
