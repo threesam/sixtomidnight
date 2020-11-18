@@ -55,23 +55,23 @@
     <li class={segment === undefined ? 'selected' : ''}>
       <a href=".">home</a>
     </li>
+    <li class={segment === 'services' ? 'selected' : ''}>
+      <a rel="prefetch" href="services">services</a>
+    </li>
+    <li class={segment === 'snacks' ? 'selected' : ''}>
+      <a rel="prefetch" href="snacks">snacks</a>
+    </li>
     <li class={segment === 'about' ? 'selected' : ''}>
       <a rel="prefetch" href="about">about</a>
     </li>
-
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-    <!-- <li class={segment === 'snacks' ? 'selected' : ''}>
-      <a rel="prefetch" href="snacks">snacks</a>
-    </li> -->
-    <li class={segment === 'tribute' ? 'selected' : ''}>
-      <a rel="prefetch" href="tribute">tribute</a>
+    <li class={segment === 'contact' ? 'selected' : ''}>
+      <a rel="prefetch" href="contact">contact</a>
     </li>
   </ul>
-  <a
+  <!-- <a
     id="contact"
     href="mailto:contact@sixtomidnight.productions"
     aria-label="contact email">
     <i class="fas fa-envelope" />
-  </a>
+  </a> -->
 </nav>
