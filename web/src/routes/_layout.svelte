@@ -20,9 +20,9 @@
 <style>
   main {
     position: relative;
-    /* background-color: var(--white); */
     margin: 0 auto;
     height: max-content;
+    max-width: 56rem;
   }
 </style>
 

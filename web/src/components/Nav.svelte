@@ -8,7 +8,6 @@
   }
 
   nav {
-    border-bottom: 1px solid var(--dark-grey);
     font-weight: 300;
     height: var(--nav-height);
     background: var(--black);
@@ -16,6 +15,8 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    max-width: 56rem;
+    margin: 0 auto;
   }
 
   ul {
@@ -29,7 +30,7 @@
     display: flex;
     align-items: center;
     height: var(--nav-height);
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   a {
