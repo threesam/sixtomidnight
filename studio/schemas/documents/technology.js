@@ -1,7 +1,7 @@
 export default {
-  name: 'tech',
+  name: 'technology',
   title: 'Technology',
-  type: 'document'
+  type: 'document',
   fields: [
     {
       name: 'name',

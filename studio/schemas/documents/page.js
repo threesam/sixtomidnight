@@ -12,8 +12,9 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      opiton: {
-        source: 'title'
+      opitons: {
+        source: 'title',
+        maxLength: 96
       }
     }
   ]
