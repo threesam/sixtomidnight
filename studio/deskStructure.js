@@ -1,10 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
 import MdSettings from 'react-icons/lib/md/settings'
 import MdPerson from 'react-icons/lib/md/person'
-import { MdBeachAccess, MdStar, MdFace, MdFlag, MdCake } from 'react-icons/lib/md'
+import { MdBeachAccess, MdStar, MdFace, MdFlag, MdCake, MdCasino } from 'react-icons/lib/md'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'author', 'post', 'siteSettings', 'project', 'client', 'technology'].includes(listItem.getId())
+  !['category', 'author', 'post', 'siteSettings', 'project', 'client', 'technology', 'service'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -19,6 +19,11 @@ export default () =>
             .schemaType('siteSettings')
             .documentId('siteSettings')
         ),
+      S.listItem()
+        .title('Services')
+        .schemaType('service')
+        .icon(MdCasino)
+        .child(S.documentTypeList('service').title('Services')),
       S.listItem()
         .title('Projects')
         .schemaType('project')
