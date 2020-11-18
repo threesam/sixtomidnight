@@ -1,0 +1,12 @@
+.myLogo {
+  max-height: 2.5rem;
+  margin: -0.85rem;
+  object-fit: cover;
+  filter: invert();
+  opacity: 0.25;
+}
+
+.myLogo:hover {
+  opacity: 0.69;
+  transition: all 0.3s ease-in-out;
+}

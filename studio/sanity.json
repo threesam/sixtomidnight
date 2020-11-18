@@ -18,7 +18,8 @@
     "dashboard-widget-document-list",
     "dashboard-widget-netlify",
     "@sanity/code-input",
-    "@sanity/vision"
+    "@sanity/vision",
+    "dark-theme-blue"
   ],
   "parts": [
     {
@@ -32,6 +33,11 @@
     {
       "implements": "part:@sanity/dashboard/config",
       "path": "dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./logo/myLogo.js"
     }
+
   ]
 }
