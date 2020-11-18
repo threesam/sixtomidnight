@@ -13,6 +13,7 @@ import client from './documents/client'
 import technology from './documents/technology'
 import project from './documents/project'
 import page from './documents/page'
+import service from './documents/service'
 
 
 // Object types
@@ -21,6 +22,7 @@ import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
+import projectReference from './objects/projectReference'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,6 +42,8 @@ export default createSchema({
     technology,
     project,
     page,
+    service,
+    projectReference,
     authorReference,
     bodyPortableText,
     bioPortableText,
