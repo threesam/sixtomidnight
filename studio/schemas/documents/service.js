@@ -4,9 +4,9 @@ export default {
   title: 'Service',
   fields: [
     {
-      name: 'title',
+      name: 'name',
       type: 'string',
-      title: 'Title'
+      title: 'Name'
     },
     {
       name: 'slug',
@@ -14,7 +14,7 @@ export default {
       title: 'Slug',
       description: 'Some frontends will require a slug to be set to be able to show the post',
       options: {
-        source: 'title',
+        source: 'name',
         maxLength: 96
       }
     },
