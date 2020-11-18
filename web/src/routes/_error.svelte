@@ -6,14 +6,9 @@
 </script>
 
 <style>
-	article {
-		display: grid;
-		place-content: center;
-	}
 	div {
 		display: inline-block;
 		padding: 2rem;
-		margin: 1rem;
 		border: 0.125rem dashed var(--accent);
 	}
 	h1, p {
