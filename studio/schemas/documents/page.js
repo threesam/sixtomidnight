@@ -12,10 +12,20 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      opitons: {
+      options: {
         source: 'title',
         maxLength: 96
       }
+    },
+    {
+      name: 'mainImage',
+      type: 'mainImage',
+      title: 'Main image'
+    },
+    {
+      name: 'body',
+      type: 'bodyPortableText',
+      title: 'Body'
     }
   ]
 }
