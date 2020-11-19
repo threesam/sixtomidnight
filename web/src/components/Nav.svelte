@@ -9,22 +9,22 @@
 
   nav {
     font-weight: 300;
+    width: 100%;
     height: var(--nav-height);
     background: var(--black);
     color: var(--white);
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    max-width: 56rem;
-    margin: 0 auto;
   }
-
+  
   ul {
     display: flex;
     flex-flow: row;
     align-items: center;
     height: 100%;
-    width: max-content;
+    min-width: 56rem;
+    margin: 0 auto;
   }
   li {
     display: flex;

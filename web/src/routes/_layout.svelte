@@ -21,8 +21,10 @@
   main {
     position: relative;
     margin: 0 auto;
+    padding: 1rem;
     height: max-content;
     max-width: 56rem;
+    border: 2px solid black;
   }
 </style>
 

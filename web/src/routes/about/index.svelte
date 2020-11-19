@@ -17,3 +17,5 @@
 <section>
   <AboutUs />
 </section>
+<a href="/about/tribute">tribute</a>
+<a href="/about/team">team</a>
