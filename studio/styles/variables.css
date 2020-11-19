@@ -1,0 +1,20 @@
+/* ./styles/variables.css */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+
+:root {
+  --black: #0b0e13;
+  --white: #fee;
+  --brand-darkest: var(--black);
+  --brand-darkest--inverted: color(var(--brand-darkest) contrast(80%));
+  --brand-lightest: var(--white);
+  --brand-primary: #beb203;
+  --brand-primary--inverted: color(var(--brand-primary) contrast(80%));
+  --brand-secondary: #118d4f;
+  --brand-secondary--inverted: var(--brand-lightest);
+
+  /* Base */
+  --brand-faded: color(var(--brand-primary) blend(var(--white) 60%));
+  --gray-base: color(var(--black) blend(var(--brand-faded) 50%));
+}
