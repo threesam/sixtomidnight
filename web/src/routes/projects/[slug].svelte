@@ -6,7 +6,7 @@
     // the `slug` parameter is available because
     // this file is called [slug].html
     const { slug } = params;
-    const filter = '*[_type == "service" && slug.current == $slug][0]';
+    const filter = '*[_type == "project" && slug.current == $slug][0]';
     const projection = `{
       ...,
       body[] {
@@ -14,38 +14,27 @@
         children[]{
           ...
         }
-      },
-      "projects": *[_type == 'project' && references(^._id)]{
-        title,
-        "slug": slug.current
       }
     }`;
 
     const query = filter + projection;
-    const service = await client
+    const project = await client
       .fetch(query, { slug })
       .catch(err => this.error(500, err));
-    return { service };
+    return { project };
   }
 </script>
 
 <script>
-  export let service;
-  const {projects} = service
+  export let project;
 </script>
 
 <svelte:head>
-  <title>{service.name}</title>
+  <title>{project.title}</title>
 </svelte:head>
 
-<h1>{service.name}</h1>
+<h1>{project.title}</h1>
 
 <div class="content">
-  <BlockContent blocks={service.body} {serializers} />
-</div>
-
-<div>
-  {#each projects as project}
-     {project.title}
-  {/each}
+  <BlockContent blocks={project.body} {serializers} />
 </div>
