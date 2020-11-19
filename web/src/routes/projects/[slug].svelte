@@ -27,11 +27,17 @@
 
 <script>
   export let project;
+  import GoBack from '../../components/BackBtn.svelte'
+
 </script>
 
 <svelte:head>
   <title>{project.title}</title>
 </svelte:head>
+
+<GoBack>
+  back outta here
+</GoBack>
 
 <h1>{project.title}</h1>
 

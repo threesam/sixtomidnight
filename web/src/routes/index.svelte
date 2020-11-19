@@ -4,7 +4,7 @@
 
 <style>
   img {
-    top: 0;
+    width: 100%;
     opacity: 0.02;
     filter: invert();
   }
@@ -32,6 +32,10 @@
     so many others so please be compassionate and stay safe! Also...
     <a href="https://blacklivesmatter.com/">#BLM</a>
   </p>
+  <br>
+  <a href="/projects">projects</a>
+  <img in:fade src="logoMain.svg" alt="six to midnight logo" />
 </div>
 
-<img in:fade src="logoMain.svg" alt="six to midnight logo" />
+
+

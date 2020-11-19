@@ -31,6 +31,9 @@
 
 <script>
   export let post;
+
+    import GoBack from '../../components/BackBtn.svelte'
+
 </script>
 
 <style>
@@ -60,6 +63,10 @@
 <svelte:head>
   <title>{post.title}</title>
 </svelte:head>
+
+<GoBack>
+  back outta here
+</GoBack>
 
 <h1>{post.title}</h1>
 

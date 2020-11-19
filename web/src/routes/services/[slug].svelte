@@ -15,7 +15,7 @@
           ...
         }
       },
-      "projects": *[_type == 'project' && references(^._id)]{
+      "projects": *[_type == 'project']{
         title,
         "slug": slug.current
       }
@@ -32,11 +32,18 @@
 <script>
   export let service;
   const {projects} = service
+
+  import GoBack from '../../components/BackBtn.svelte'
+
 </script>
 
 <svelte:head>
   <title>{service.name}</title>
 </svelte:head>
+
+<GoBack>
+  back outta here
+</GoBack>
 
 <h1>{service.name}</h1>
 
@@ -44,8 +51,8 @@
   <BlockContent blocks={service.body} {serializers} />
 </div>
 
-<div>
+<ul>
   {#each projects as project}
-     {project.title}
+     <li><a href={`projects/${project.slug}`}>{project.title}</a></li>
   {/each}
-</div>
+</ul>
