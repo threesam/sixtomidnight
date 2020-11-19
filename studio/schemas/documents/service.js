@@ -27,11 +27,6 @@ export default {
       name: 'description',
       type: 'excerptPortableText',
       title: 'Description'
-    },
-    {
-      name: 'projects',
-      type: 'projectReference',
-      title: 'Projects'
     }
   ]
 }
