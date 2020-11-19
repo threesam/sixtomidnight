@@ -46,8 +46,8 @@
     <li class={segment === undefined ? 'selected' : ''}>
       <a href=".">home</a>
     </li>
-    <li class={segment === 'services' ? 'selected' : ''}>
-      <a rel="prefetch" href="services">services</a>
+    <li class={segment === 'develop' ? 'selected' : ''}>
+      <a rel="prefetch" href="develop">develop</a>
     </li>
     <li class={segment === 'snacks' ? 'selected' : ''}>
       <a rel="prefetch" href="snacks">snacks</a>

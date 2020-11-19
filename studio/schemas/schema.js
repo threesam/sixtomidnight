@@ -13,7 +13,7 @@ import client from './documents/client'
 import technology from './documents/technology'
 import project from './documents/project'
 import page from './documents/page'
-import service from './documents/service'
+import developmentService from './documents/developmentService'
 
 
 // Object types
@@ -42,7 +42,7 @@ export default createSchema({
     technology,
     project,
     page,
-    service,
+    developmentService,
     projectReference,
     authorReference,
     bodyPortableText,

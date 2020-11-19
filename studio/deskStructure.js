@@ -4,7 +4,7 @@ import MdPerson from 'react-icons/lib/md/person'
 import { MdBeachAccess, MdStar, MdFace, MdFlag, MdCake, MdCasino } from 'react-icons/lib/md'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'author', 'post', 'siteSettings', 'project', 'client', 'technology', 'service'].includes(listItem.getId())
+  !['category', 'author', 'post', 'siteSettings', 'project', 'client', 'technology', 'developmentService'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -20,10 +20,10 @@ export default () =>
             .documentId('siteSettings')
         ),
       S.listItem()
-        .title('Services')
-        .schemaType('service')
+        .title('Development Services')
+        .schemaType('developmentService')
         .icon(MdCasino)
-        .child(S.documentTypeList('service').title('Services')),
+        .child(S.documentTypeList('developmentService').title('Development Services')),
       S.listItem()
         .title('Projects')
         .schemaType('project')
