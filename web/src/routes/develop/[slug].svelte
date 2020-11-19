@@ -48,7 +48,7 @@
 <h1>{developmentService.name}</h1>
 
 <div class="content">
-  <BlockContent blocks={developmentService.body} {serializers} />
+  <BlockContent blocks={developmentService.description} {serializers} />
 </div>
 
 <h2>Associated Projects</h2>
