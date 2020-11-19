@@ -21,11 +21,9 @@
 {#if !services.length}
   <p>seems like we don't have any</p>
 {:else}
-<ul>
-
-  {#each services as service}
-  <!-- content here -->
-  <li>{service.name}</li>
-  {/each}
-</ul>
+  <ul>
+    {#each services as service}
+      <li><a href={`services/${service.slug.current}`}>{service.name}</a></li>
+    {/each}
+  </ul>
 {/if}
