@@ -61,7 +61,7 @@
 <GoBack>
   back outta here
 </GoBack>
-<!-- style="background: url('great-success.png') no-repeat center center/contain;" -->
+
 <article>
     <h2 transition:blur={{ delay: 200 }}>Our Team</h2>
     <div>
