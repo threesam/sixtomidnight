@@ -19,6 +19,16 @@ export default {
       }
     },
     {
+      name: 'role',
+      type: 'string',
+      title: 'Role'
+    },
+    {
+      name: 'roleDescription',
+      type: 'excerptPortableText',
+      title: 'Role description'
+    },
+    {
       name: 'image',
       type: 'mainImage',
       title: 'Image'
