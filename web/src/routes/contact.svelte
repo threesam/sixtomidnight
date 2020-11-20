@@ -1,25 +1,32 @@
 <h1>Contact</h1>
 
-<form name="contact" method="POST" data-netlify="true">
-    <p>
-      <label>Your Name: <input type="text" name="name" /></label>   
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>Consulatation for: <select name="role[]" multiple>
-        <option value="web-development">Web Development</option>
-        <option value="content-creation">Content Creation</option>
-        <option value="marketing">Marketing</option>
-        <option value="events">Events</option>
-      </select></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot=“bot-field”>
+  <input type="hidden" name="form-name" value="contact" /> 
+
+  <div>
+    <label for="name">Name</label>
+    <input type="name" name="name" />
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email" />
+  </div>
+
+  <div>
+    <label for="development-type">Development type</label>
+    <select name="development-type" multiple>
+      <option value="web-development">Web</option>
+      <option value="artist-development">Artist</option>
+      <option value="community-development">Community</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea name="message" />
+  </div>
+
+  <button type="submit">Send</button>
+</form>
   
