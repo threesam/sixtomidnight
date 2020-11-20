@@ -21,7 +21,7 @@
 </script>
 
 <script>
-    import { fly } from 'svelte/transition'
+    import { fly, fade } from 'svelte/transition'
 
   export let about
   const {title, image, alt, body} = about
@@ -48,7 +48,7 @@
 <article>
   <section>
     <h1>{title}</h1>
-    <img src="{image}" {alt} />
+    <img in:fade src="{image}" {alt} />
     <div in:fly={{ y: -100 }}>
       <BlockContent blocks={body} {serializers} />
     </div>

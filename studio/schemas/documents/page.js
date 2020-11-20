@@ -26,6 +26,16 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'pageReference',
+      title: 'Pages',
+      type: 'reference',
+      to: [
+        {
+          type: 'page'
+        }
+      ]
     }
   ]
 }
