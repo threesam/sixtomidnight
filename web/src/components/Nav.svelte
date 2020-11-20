@@ -25,6 +25,7 @@
     height: 100%;
     min-width: 56rem;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   li {
     display: flex;
