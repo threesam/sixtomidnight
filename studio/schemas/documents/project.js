@@ -53,12 +53,12 @@ export default {
       ]
     },
     {
-      name: 'authors',
-      title: 'Authors',
+      name: 'contributors',
+      title: 'Contributors',
       type: 'array',
       of: [
         {
-          type: 'authorReference'
+          type: 'contributorReference'
         }
       ]
     },

@@ -26,11 +26,10 @@ export default {
       }
     },
     {
-      name: 'author',
+      name: 'contributor',
       type: 'reference',
-      description: 'Publish an author and set a reference to them here.',
-      title: 'Author',
-      to: [{ type: 'author' }]
+      title: 'Founders',
+      to: [{ type: 'contributor' }]
     }
   ]
 }

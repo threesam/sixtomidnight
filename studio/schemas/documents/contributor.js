@@ -1,7 +1,7 @@
 export default {
-  name: 'teamMember',
+  name: 'contributor',
   type: 'document',
-  title: 'Team Member',
+  title: 'Contributor',
   fields: [
     {
       name: 'name',
@@ -42,6 +42,11 @@ export default {
       name: 'handles',
       type: 'handles',
       title: 'Handles'
+    },
+    {
+      name: 'founder',
+      type: 'boolean',
+      title: 'Founder?'
     }
   ],
   preview: {

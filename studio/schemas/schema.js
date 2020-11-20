@@ -6,7 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
 import author from './documents/author'
-import teamMember from './documents/teamMember'
+import contributor from './documents/contributor'
 import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
@@ -23,6 +23,7 @@ import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
+import contributorReference from './objects/contributorReference'
 import projectReference from './objects/projectReference'
 import handles from './objects/handles'
 
@@ -39,7 +40,7 @@ export default createSchema({
     post,
     category,
     author,
-    teamMember,
+    contributor,
     mainImage,
     client,
     technology,
@@ -49,6 +50,7 @@ export default createSchema({
     developmentService,
     projectReference,
     authorReference,
+    contributorReference,
     bodyPortableText,
     bioPortableText,
     excerptPortableText
