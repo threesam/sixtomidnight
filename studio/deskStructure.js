@@ -1,7 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import MdSettings from 'react-icons/lib/md/settings'
-import MdPerson from 'react-icons/lib/md/person'
-import { MdBeachAccess, MdStar, MdFace, MdFlag, MdCake, MdCasino, MdPages } from 'react-icons/lib/md'
+import { MdBeachAccess, MdStar, MdFace, MdFlag, MdCake, MdCasino, MdPages, MdPerson, MdSettings } from 'react-icons/md'
 
 const hiddenDocTypes = listItem =>
   !['category', 'author', 'post', 'siteSettings', 'project', 'client', 'technology', 'developmentService', 'page', 'contributor'].includes(listItem.getId())
