@@ -26,6 +26,8 @@ import authorReference from './objects/authorReference'
 import contributorReference from './objects/contributorReference'
 import projectReference from './objects/projectReference'
 import handles from './objects/handles'
+import externalLink from './objects/externalLink'
+import internalLink from './objects/internalLink'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -47,6 +49,8 @@ export default createSchema({
     project,
     page,
     handles,
+    internalLink,
+    externalLink,
     developmentService,
     projectReference,
     authorReference,

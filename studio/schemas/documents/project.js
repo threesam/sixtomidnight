@@ -22,10 +22,9 @@ export default {
       }
     },
     {
-      name: 'publishedAt',
+      name: 'updated',
       type: 'datetime',
-      title: 'Published at',
-      description: 'This can be used to schedule post for publishing'
+      title: 'Updated'
     },
     {
       name: 'mainImage',
@@ -33,11 +32,31 @@ export default {
       title: 'Main image'
     },
     {
+      name: 'contributors',
+      title: 'Contributors',
+      type: 'array',
+      of: [
+        {
+          type: 'contributorReference'
+        }
+      ]
+    },
+    {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',
       description:
         'This ends up on summary pages, on Google, when people share your post in social media.'
+    },
+    {
+      name: 'website',
+      type: 'externalLink',
+      title: 'Website'
+    },
+    {
+      name: 'repo',
+      type: 'externalLink',
+      title: 'Repo'
     },
     {
       name: 'categories',
@@ -53,22 +72,15 @@ export default {
       ]
     },
     {
-      name: 'contributors',
-      title: 'Contributors',
+      name: 'relatedServices',
       type: 'array',
+      title: 'Related Services',
       of: [
         {
-          type: 'contributorReference'
-        }
-      ]
-    },
-    {
-      name: 'clientReference',
-      title: 'Client',
-      type: 'reference',
-      to: [
-        {
-          type: 'client'
+          type: 'reference',
+          to: {
+            type: 'developmentService'
+          }
         }
       ]
     },
@@ -86,6 +98,16 @@ export default {
       ]
     },
     {
+      name: 'clientReference',
+      title: 'Client',
+      type: 'reference',
+      to: [
+        {
+          type: 'client'
+        }
+      ]
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
@@ -93,11 +115,11 @@ export default {
   ],
   orderings: [
     {
-      name: 'publishingDateAsc',
-      title: 'Publishing date new–>old',
+      name: 'updatedAsc',
+      title: 'Updated Date  new–>old',
       by: [
         {
-          field: 'publishedAt',
+          field: 'updated',
           direction: 'asc'
         },
         {
@@ -107,11 +129,11 @@ export default {
       ]
     },
     {
-      name: 'publishingDateDesc',
-      title: 'Publishing date old->new',
+      name: 'updatedDesc',
+      title: 'Updated Date  old->new',
       by: [
         {
-          field: 'publishedAt',
+          field: 'updated',
           direction: 'desc'
         },
         {
@@ -124,17 +146,18 @@ export default {
   preview: {
     select: {
       title: 'title',
-      publishedAt: 'publishedAt',
+      updated: 'updated',
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare({ title = 'No title', publishedAt, slug, media }) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
+    prepare({ title = 'No title', updated, slug, media }) {
+      const dateSegment = format(updated, 'YYYY/MM/DD')
+      // const path = `/${dateSegment}/${slug.current}/`
       return {
         title,
         media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
+        // subtitle: updated ? path : 'Missing publishing date'
+        subtitle: updated ? `updated: ${dateSegment}` : 'This project has yet to be published'
       }
     }
   }
