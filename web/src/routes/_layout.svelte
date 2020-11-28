@@ -17,7 +17,7 @@
   const site = 'https://sixtomidnight.productions'
 </script>
 
-<style>
+<!-- <style>
   main {
     position: relative;
     margin: 0 auto;
@@ -25,7 +25,7 @@
     height: max-content;
     max-width: 56rem;
   }
-</style>
+</style> -->
 
 <svelte:head>
   <meta property="og:title" content={title} />

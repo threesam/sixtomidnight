@@ -9,6 +9,8 @@
     const filter = '*[_type == "project" && slug.current == $slug][0]';
     const projection = `{
       ...,
+      "image": mainImage.asset->url,
+      "alt": mainImage.alt,
       body[] {
         ...,
         children[]{
@@ -28,6 +30,7 @@
 <script>
   export let project;
   import GoBack from '../../components/BackBtn.svelte'
+  import Hero from '../../components/Hero.svelte';
 
 </script>
 
@@ -35,12 +38,18 @@
   <title>{project.title}</title>
 </svelte:head>
 
+<style>
+  img {
+    max-width: 100%;
+  }
+</style>
+
+
+<Hero data={project}/>
+
 <GoBack>
   back outta here
 </GoBack>
-
-<h1>{project.title}</h1>
-
 <div class="content">
   <BlockContent blocks={project.body} {serializers} />
 </div>

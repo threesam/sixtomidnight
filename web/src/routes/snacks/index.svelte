@@ -3,7 +3,12 @@
   export function preload({ params, query }) {
     return client
       .fetch(
-        '*[_type == "post" && defined(slug.current) && publishedAt < now()]|order(publishedAt desc)',
+        `*[_type == "post" && defined(slug.current)]|order(publishedAt desc){
+          title,
+          "slug": slug.current,
+          "image": mainImage.asset->url,
+          "alt": mainImage.alt
+        }`,
       )
       .then((posts) => {
         return { posts }
@@ -14,34 +19,58 @@
 
 <script>
   export let posts
+  console.log(posts)
 
   function formatDate(date) {
     return new Date(date).toLocaleDateString()
   }
 </script>
 
-<style>
-  ul {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
-  }
-</style>
-
 <svelte:head>
   <title>Snacks</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<style>
+  li {
+    position: relative;
+    width: 100%;
+    height: 30%;
+  }
 
-<ul>
-  {#each posts as post}
-    <!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-    <li>
-      <a rel="prefetch" href="snacks/{post.slug.current}">{post.title}</a>
-      ({formatDate(post.publishedAt)})
-    </li>
-  {/each}
-</ul>
+  a {
+    font-size: 1.5rem;
+    display: block;
+    text-decoration: none;
+    padding: 2rem;
+    width: 100%;
+    filter: grayscale(90%);
+  }
+  a:hover {
+    filter: grayscale(30%);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+  }
+</style>
+
+<h1>Recent Posts</h1>
+
+{#if !posts.length}
+  <p>seems like we don't have any</p>
+{:else}
+  <ul>
+    {#each posts as {title, slug, image: src, alt}}
+      <li>
+        <a href={`snacks/${slug}`}>{title}</a>
+        <img {src} {alt}>
+      </li>
+    {/each}
+  </ul>
+{/if}
