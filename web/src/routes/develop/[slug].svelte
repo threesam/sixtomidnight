@@ -35,6 +35,7 @@
 </script>
 
 <script>
+  import {scale} from 'svelte/transition'
   export let service;
   const {name, image, alt, description, projects} = service
 
@@ -42,75 +43,26 @@
   import Hero from '../../components/Hero.svelte'
 </script>
 
-<style>
-  article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  li {
-    position: relative;
-    width: 100%;
-    height: 30vh;
-  }
-
-  a {
-    font-size: 1.5rem;
-    display: grid;
-    place-content: center;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    filter: grayscale(90%);
-    text-shadow: 0 0 25px black;
-    font-size: 2rem;
-  }
-  a:hover {
-    filter: grayscale(30%);
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -10;
-  }
-</style>
-
 <svelte:head>
   <title>{name}</title>
 </svelte:head>
 
-<article>
+  
+  <Hero data={service}>
+    <BlockContent blocks={description} {serializers} />
+    <GoBack>
+      back outta here
+    </GoBack>
+  </Hero>
 
-    
-    <Hero data={service}>
-      <BlockContent blocks={description} {serializers} />
-      <GoBack>
-        back outta here
-      </GoBack>
-    </Hero>
-    
-    
-  
-  
-  <section>
-    
-    <h2>Related Projects</h2>
+  <section>   
+    <h2>{name} Projects</h2>
     <ul>
       {#each projects as {slug, title, image, alt}}
       <li>
         <a href={`projects/${slug}`}>{title}</a>
-        <img src="{image}" alt="{alt}">
+        <img in:scale src="{image}" alt="{alt}">
       </li>
       {/each}
-    </ul>
-    
+    </ul>  
   </section>
-</article>

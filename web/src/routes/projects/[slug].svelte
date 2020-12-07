@@ -38,13 +38,6 @@
   <title>{project.title}</title>
 </svelte:head>
 
-<style>
-  img {
-    max-width: 100%;
-  }
-</style>
-
-
 <Hero data={project}/>
 
 <GoBack>

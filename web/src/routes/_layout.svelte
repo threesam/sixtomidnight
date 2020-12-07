@@ -9,23 +9,13 @@
 </script>
 
 <script>
-  import Nav from '../components/Nav.svelte'
+  import Header from '../components/Header.svelte'
 
   export let segment
   export let meta
   const { title, description, keywords } = meta
   const site = 'https://sixtomidnight.productions'
 </script>
-
-<!-- <style>
-  main {
-    position: relative;
-    margin: 0 auto;
-    padding: 1rem;
-    height: max-content;
-    max-width: 56rem;
-  }
-</style> -->
 
 <svelte:head>
   <meta property="og:title" content={title} />
@@ -37,8 +27,8 @@
   <meta name="twitter:image:alt" content={`logo for ${title}`} />
 </svelte:head>
 
-<Nav {segment} />
+<Header {segment} />
 
-<main>
+<main class="layout">
   <slot />
 </main>

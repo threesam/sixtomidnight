@@ -20,40 +20,7 @@
   export let developmentServices
 </script>
 
-<style>
-  li {
-    position: relative;
-    width: 100%;
-    height: 30vh;
-  }
-
-  a {
-    font-size: 1.5rem;
-    display: grid;
-    place-content: center;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    filter: grayscale(90%);
-    text-shadow: 0 0 25px black;
-    font-size: 2rem;
-  }
-  a:hover {
-    filter: grayscale(30%);
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -10;
-  }
-</style>
-
-<h1>Development Services</h1>
+<h1>Services</h1>
 
 {#if !developmentServices.length}
   <p>seems like we don't have any</p>

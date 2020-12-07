@@ -11,6 +11,7 @@
     position: relative;
     display: grid;
     place-content: center;
+    overflow: hidden;
   }
 
   div {
@@ -24,6 +25,7 @@
     object-fit: cover;
     z-index: -10;
     filter: brightness(25%);
+    scale: 1.4;
   }
 </style>
 

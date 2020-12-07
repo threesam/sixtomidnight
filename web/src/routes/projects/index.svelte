@@ -21,36 +21,6 @@
   export let projects
 </script>
 
-<style>
-  li {
-    position: relative;
-    width: 100%;
-    height: 30%;
-  }
-
-  a {
-    font-size: 1.5rem;
-    display: block;
-    text-decoration: none;
-    padding: 2rem;
-    width: 100%;
-    filter: grayscale(90%);
-  }
-  a:hover {
-    filter: grayscale(30%);
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -10;
-  }
-</style>
-
 <h1>Projects</h1>
 
 {#if !projects.length}

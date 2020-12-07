@@ -25,21 +25,7 @@
 
   export let about
   const {title, image, alt, body} = about
-  console.log(about)
 </script>
-
-<style>
-  article {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-  }
-  img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-</style>
 
 <svelte:head>
   <title>{title}</title>

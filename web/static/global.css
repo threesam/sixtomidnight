@@ -1,65 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400|Space+Mono:400');
+
 :root {
-  --rgb-white: 250, 245, 250;
-  --rgb-light-grey: 200, 195, 200;
-  --rgb-dark-grey: 64, 65, 62;
-  --rgb-black: 15, 10, 15;
-  --rgb-accent: 239, 192, 80;
+  /* define colors as colors */
+  --green: #00ebc7;
+  --red: #ff5470;
+  --yellow: #fde24f;
+  --black: #1b2d45;
+  --darkBlue: #00214d;
+  --darkGrey: #222;
+  --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
+  --white: #fff;
 
-  --white: rgb(var(--rgb-white));
-  --light-grey: rgb(var(--rgb-light-grey));
-  --dark-grey: rgb(var(--rgb-dark-grey));
-  --black: rgb(var(--rgb-black));
-  --accent: rgb(var(--rgb-accent));
+  /* define colors' intentions */
+  --primary: var(--green);
+  --danger: var(--red);
+  --background: var(--lightGrey);
+  --textColor: var(--black);
+  --buttonTextColor: var(--black);
+  --lineColor: var(--grey);
+  --cardBg: var(--white);
+  --headerBackground: var(--darkBlue);
+  --headerTextColor: var(--lightGrey);
+  --footerBackground: var(--black);
+  --footerTextColor: var(--lightGrey);
 
+  /* Styles */
+  --line: solid 1px var(--lineColor);
+  --baseFontSize: 100%;
+  --borderRadius: 10px;
+
+  /* Type */
+  --headingFont: 'Space Mono', monospace;
+  --bodyFont: 'Work Sans', sans-serif;
+  --h1: 3.052rem;
+  --h2: 2.441rem;
+  --h3: 1.953rem;
+  --h4: 1.563rem;
+  --h5: 1.25rem;
+  --h6: 1rem;
+  --smallText: 0.8rem;
+
+  /* Elevation */
+  --elevation-1: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+  --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
 }
 
-@import url("https://use.typekit.net/dtd5wpi.css");
+@media only screen and (min-width: 500px) {
+  :root {
+    --baseFontSize: 112.5%;
+  }
+}
 
-* {
-  margin: 0;
-  padding: 0;
+
+/* FROM type-scale.com */
+
+html {
+  font-size: var(--baseFontSize);
   box-sizing: border-box;
+} /*18px*/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-  font-family: nunito, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--bodyFont);
   font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  background-color: var(--dark-grey);
-  color: var(--white);
+  line-height: 1.75;
+  background: var(--background);
+  color: var(--textColor);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5em;
-  color: var(--accent);
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  background: var(--headerBackground);
+  box-shadow: var(--elevation-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--containerPadding);
+}
+
+header a {
+  color: var(--headerTextColor);
+  text-decoration: none;
+}
+
+header nav a + a {
+  margin-left: 10px;
+}
+
+footer {
+  color: var(--footerTextColor);
+  background: var(--footerBackground);
+  padding: 2rem var(--containerPadding);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* css variables bubble up, even though not in root scope */
+footer a {
+  color: var(--footerTextColor);
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 40em;
+}
+
+a,
+p a, 
+blockquote a {
+  color: var(--textColor);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
 }
 
 h1 {
-  font-size: 2rem;
+  margin-top: 0;
+  font-size: var(--h1);
 }
 
-a {
-  color: var(--light-grey);
+h2 {font-size: var(--h2);}
+
+h3 {font-size: var(--h3);}
+
+h4 {font-size: var(--h4);}
+
+h5 {font-size: var(--h5);}
+
+h6 {font-size: var(--h6);}
+
+small, .text_small {font-size: var(--smallText);}
+
+/* End type-scale */
+
+blockquote {
+  margin: 1em;
+  padding: 2em;
+  background: var(--cardBg);
+  box-shadow: var(--elevation-3);
+
 }
 
-ul {
-  list-style: none;
+label {
+  display: block;
+  font-size: var(--smallText);
+}
+
+input, textarea {
+  padding: 4px 5px;
+  border: var(--line);
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  height: 5em;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+select {
+  border: var(--line);
+}
+
+hr {
+  border-top: var(--line);
+}
+
+button {
+  --buttonColor: var(--primary);
+  appearance: none;
+  color: var(--buttonTextColor);
+  background: var(--buttonColor);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 25px;
+  box-shadow: var(--elevation-1);
+  transition: 0.3s ease-in-out box-shadow;
+}
+
+button:hover {  
+  box-shadow: var(--elevation-2);
+}
+
+button[disabled] {
+  opacity: 0.4;
+}
+
+button.cancel {
+  --buttonColor: var(--danger);
+  --textColor: var(--white);
+}
+
+button.small {
+  font-size: var(--smallText);
+}
+
+.layout {
+  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+}
+
+.grid {
+  --gridCols: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--gridCols), 1fr);
+}
+
+.grid--split  {
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+/* utility class for grid */
+.cols-3 {
+  --gridCols: 3;
+}
+
+/* utility class for grid */
+.cols-4 {
+  --gridCols: 4;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.flex {
+  --justifyContent: space-between;
+  display: flex;
+  justify-content: var(--justifyContent);
+}
+
+.flex-around {
+  --justifyContent: space-around;
+}
+
+.fake-logo {
   margin: 0;
+  font-size: var(--baseFontSize);
 }
 
-code {
-  font-family: menlo, inconsolata, monospace;
-  font-size: calc(1em - 2px);
-  color: #555;
-  background-color: #f0f0f0;
-  padding: 0.2em 0.4em;
-  border-radius: 2px;
+.card {
+  padding: 2em;
+  background: var(--cardBg);
+  box-shadow: var(--elevation-3);
+  border-radius: var(--borderRadius);
+}
+
+/* first item will never have a margin top */
+.card > *:first-child {
+  margin-top: 0;
+}
+
+/* last child in card will never have margin bottom */
+.card > *:last-child {
+  margin-bottom: 0;
+}
+
+
+
+.dark {
+  --cardBg: var(--darkGrey);
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+  --buttonTextColor: var(--black);
+  --headerBackground: var(--darkGrey);
+  --footerBackground: var(--darkGrey);
+}
+
+.oled {
+  /* specificity of this on body, means that redefining black will change it everywhere :) */
+  --black: #000;
+}
+
+
+/* CSS specificity: least to most */
+/* element: hi, div */
+/* Class, attribute, [type="input"] */
+/* IDs */
+/* !important - don't ever use this */
+
+/* more specific based on load order */
+/* h1 {
+  font-size: 1rem;
+}
+the second one renders
+h1 {
+  font-size: 3rem;
+} */
+
+
+/*  */
+.content {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content img {
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar {
